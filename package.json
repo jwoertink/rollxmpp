@@ -1,0 +1,30 @@
+{
+  "name": "rollxmpp",
+  "version": "0.0.1",
+  "directories": {
+    "lib": "./lib"
+  },
+  "main": "./lib/rollxmpp",
+  "description": "Simple to use NodeJS XMPP Client",
+  "author": "Jeremy Woertink <jeremywoertink@gmail.com>",
+  "homepage": "https://github.com/jwoertink/rollxmpp",
+  "licenses": [
+    {
+      "type": "The MIT License",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    }
+  ],
+
+  "dependencies": {
+    "node-xmpp-client": "^1.0.0"
+  },
+
+  "devDependencies": {
+    "jasmine-node": "1.14.5"
+  },
+
+  "repository": {
+    "type" : "git",
+    "url" : "git@github.com:jwoertink/rollxmpp.git"
+  }
+}
