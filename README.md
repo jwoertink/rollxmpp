@@ -4,7 +4,7 @@ A simple to use XMPP client for NodeJS
 ## Setup
 be sure to `npm install`
 
-## Useage
+## Usage
 
 ```javascript
 var rollxmpp = require('rollxmpp');
