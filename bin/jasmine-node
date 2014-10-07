@@ -1,0 +1,6 @@
+#!/usr/bin/env node
+
+var path = require('path');
+var jasminePath = path.join(__dirname, '..', 'node_modules', 'jasmine-node', 'bin', 'jasmine-node');
+
+require(jasminePath);
