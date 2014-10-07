@@ -13,7 +13,18 @@ var connection = rollxmpp.connect({jid: 'me@domain.co', password: 'password', ho
 
 // Instant Messaging
 connection.message('friend@domain.co', 'sup?');
+
+// Set presence
+connection.setPresence('away', 'BRB! Out to lunch');
 ```
+
+## Features
+* Connect to XMPP server
+* Disconnect from XMPP server
+* Send chat message to a single user
+* Set your presence
+* Get Roster
+* Manage subscriptions
 
 ## Testing
 For now we will just proxy to the [jasmine-node](https://github.com/mhevery/jasmine-node) in the node_modules
