@@ -16,6 +16,21 @@ connection.message('friend@domain.co', 'sup?');
 
 // Set presence
 connection.setPresence('away', 'BRB! Out to lunch');
+
+// Add a buddy
+connection.addContact('buddy@domain.co');
+
+// Request Friend's vCard
+connection.getVCard('friend@domain.co')
+// this is currently an ugly implementation
+// but this just sends the request. You have
+// to listen for the response
+connection.on('stanza', function(stanza) {
+  if(stanza.name == 'iq' && stanza.attrs.type == 'result' && stanza.attrs.id == 'roster_0') {
+    var friends = stanza.children[0].children;
+    // iterate over friends and parse it for their info. I'll probably make this cleaner later
+  }
+});
 ```
 
 ## Features
@@ -24,6 +39,8 @@ connection.setPresence('away', 'BRB! Out to lunch');
 * Send chat message to a single user
 * Set your presence
 * Get Roster
+* Add friend to roster
+* get a friend's vCard
 * Manage subscriptions
 
 ## Testing
