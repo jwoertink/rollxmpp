@@ -26,7 +26,7 @@ connection.getVCard('friend@domain.co')
 // but this just sends the request. You have
 // to listen for the response
 connection.on('stanza', function(stanza) {
-  if(stanza.name == 'iq' && stanza.attrs.type == 'result' && stanza.attrs.id == 'roster_0') {
+  if(stanza.name == 'iq' && stanza.attrs.type == 'result' && stanza.attrs.id == 'get-roster') {
     var friends = stanza.children[0].children;
     // iterate over friends and parse it for their info. I'll probably make this cleaner later
   }
@@ -47,3 +47,8 @@ connection.on('stanza', function(stanza) {
 For now we will just proxy to the [jasmine-node](https://github.com/mhevery/jasmine-node) in the node_modules
 
 `./bin/jasmine-node spec/`
+
+## TODO
+* use grunt to run the test suite
+* actually write tests
+* add callbacks to functions so user doesn't have to listen for every event
